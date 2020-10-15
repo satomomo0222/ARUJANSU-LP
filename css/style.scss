@@ -1,0 +1,11 @@
+// sass ./css/style.scss:./css/style.css --style expanded
+
+$box-color:red;
+
+body{
+  .box{
+    width:100px;
+    height:100px;
+    background-color: $box-color;
+  }
+}
