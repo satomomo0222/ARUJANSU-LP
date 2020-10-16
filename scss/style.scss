@@ -1,0 +1,129 @@
+// sass ./scss/style.scss:./css/style.css --style expanded
+
+// フォント集
+  $sans: 'Noto Sans JP', sans-serif;
+  // optimaは有料だったので代替フォント
+  $optima: 'Marcellus', serif;
+// 文字の色
+  $color:#FFFCF9;
+
+
+@mixin title{
+  font-size:54px;
+  letter-spacing: 0.01em;
+  color: $color;
+  font-family: $optima;
+}
+@mixin subtitle{
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: $color;
+  font-family: $sans;
+}
+@mixin button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width:200px;
+  height:50px;
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  font-size:18px;
+  letter-spacing: 0.01em;
+  color: $color;
+  font-family: $sans;
+}
+
+
+.header{
+  position:fixed;
+  width:100%;
+  height:95px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index: 2;
+  &__left{
+    padding-left:48px;
+  }
+  &__logo{
+    width:30px;
+  }
+  &__link{
+    @include subtitle;
+    margin-right:40px;
+  }
+}
+
+.main__sec1{
+  position: relative;
+  // overflow: hidden;
+  background-color: aquamarine;
+  & video{
+    width: 100%;
+    height: auto;
+  }
+  & .container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left:0;
+    // overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & .content{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      & .title{
+        @include title;
+        margin:0 15px;
+      }
+      & .subtitle{
+        @include subtitle;
+        letter-spacing: 2px;
+        line-height: 220%;
+        margin-top:11.5px;
+      }
+      & .button{
+        @include button;
+        position: absolute;
+        bottom:-110px;
+      }
+    }
+  }
+  & .scroll{
+    @include subtitle;
+    writing-mode: vertical-rl;
+    position:absolute;
+    right:36px;
+    bottom:69px;
+    font-weight: 400;
+    &:before{
+      content:"";
+      position:absolute;
+      right:10px;
+      bottom:-69px;
+      width:1px;
+      height:55px;
+      background-color: #FFFFFF;
+      z-index:1;
+    }
+    &:after{
+      content:"";
+      position:absolute;
+      right:10px;
+      bottom:-124px;
+      width:1px;
+      height:55px;
+      background-color: #B79ACA;
+      z-index:1;
+    }
+  }
+}

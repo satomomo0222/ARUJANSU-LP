@@ -1,7 +1,114 @@
-body .box {
-  width: 100px;
-  height: 100px;
-  background-color: red;
+.header {
+  position: fixed;
+  width: 100%;
+  height: 95px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+.header__left {
+  padding-left: 48px;
+}
+.header__logo {
+  width: 30px;
+}
+.header__link {
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: #FFFCF9;
+  font-family: "Noto Sans JP", sans-serif;
+  margin-right: 40px;
+}
+
+.main__sec1 {
+  position: relative;
+  background-color: aquamarine;
+}
+.main__sec1 video {
+  width: 100%;
+  height: auto;
+}
+.main__sec1 .container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__sec1 .container .content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main__sec1 .container .content .title {
+  font-size: 54px;
+  letter-spacing: 0.01em;
+  color: #FFFCF9;
+  font-family: "Marcellus", serif;
+  margin: 0 15px;
+}
+.main__sec1 .container .content .subtitle {
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: #FFFCF9;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 2px;
+  line-height: 220%;
+  margin-top: 11.5px;
+}
+.main__sec1 .container .content .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  font-size: 18px;
+  letter-spacing: 0.01em;
+  color: #FFFCF9;
+  font-family: "Noto Sans JP", sans-serif;
+  position: absolute;
+  bottom: -110px;
+}
+.main__sec1 .scroll {
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: #FFFCF9;
+  font-family: "Noto Sans JP", sans-serif;
+  writing-mode: vertical-rl;
+  position: absolute;
+  right: 36px;
+  bottom: 69px;
+  font-weight: 400;
+}
+.main__sec1 .scroll:before {
+  content: "";
+  position: absolute;
+  right: 10px;
+  bottom: -69px;
+  width: 1px;
+  height: 55px;
+  background-color: #FFFFFF;
+  z-index: 1;
+}
+.main__sec1 .scroll:after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  bottom: -124px;
+  width: 1px;
+  height: 55px;
+  background-color: #B79ACA;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
