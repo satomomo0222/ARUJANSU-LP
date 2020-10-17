@@ -1,25 +1,44 @@
 // sass ./scss/style.scss:./css/style.css --style expanded
 
+@font-face{
+  font-family: "Noto Sans CJK JP";
+  src: url("../NotoSansCJKjp-Regular.otf");
+  font-weight: 500;
+}
+@font-face{
+  font-family: "New York Small";
+  src: url("../NewYorkSmall-Regular.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+
 // フォント集
   $sans: 'Noto Sans JP', sans-serif;
+  $serif: 'Noto Serif JP', serif;
+  $cjk: 'Noto Sans CJK JP';
+  $newyork: 'New York Small';
   // optimaは有料だったので代替フォント
   $optima: 'Marcellus', serif;
 // 文字の色
   $color:#FFFCF9;
+  $fontcolor:#484848;
+  $pink: #EA6A74;
 
-
-@mixin title{
-  font-size:54px;
-  letter-spacing: 0.01em;
-  color: $color;
-  font-family: $optima;
-}
 @mixin subtitle{
   font-size: 16px;
   letter-spacing: -0.01em;
-  color: $color;
+  color:$color;
   font-family: $sans;
 }
+
+@mixin text{
+  font-size: 14px;
+  letter-spacing: 5px;
+  color:$fontcolor;
+  font-family: $sans;
+  font-weight: 500;
+}
+
 @mixin button{
   display: flex;
   align-items: center;
@@ -33,19 +52,24 @@
   letter-spacing: 0.01em;
   color: $color;
   font-family: $sans;
+  text-decoration: none;
+  outline: none;
+  overflow: hidden;
+  z-index: 2;
 }
 
-
 .header{
-  position:fixed;
   width:100%;
   height:95px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  z-index: 2;
+  z-index: 10;
   &__left{
     padding-left:48px;
+    & img{
+      width:215px;
+    }
   }
   &__logo{
     width:30px;
@@ -56,10 +80,114 @@
   }
 }
 
-.main__sec1{
+.header--fadein{
+  display:none;
+  position:fixed;
+  background-color: #FFFFFF;
+  box-shadow: 0px 1px 13px rgba(152, 104, 108, 0.15);
+  &__link{
+    color:$fontcolor;
+  }
+}
+
+.header--top{
+  position:absolute;
+}
+
+
+.section{
   position: relative;
+  & .container{
+    &__title{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      &--top{
+        width: 64px;
+        margin-bottom: 16px;
+      }
+      & p{
+        color: $pink;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.04em;
+        margin-bottom: 8px;
+        font-family: $newyork;
+      }
+      & h1{
+        color:$fontcolor;
+        font-size: 24px;
+        line-height: 160%;
+        letter-spacing: 0.02em;
+        font-family: $serif;
+        font-weight: 500;
+      }
+      &--bottom{
+        width:386px;
+        margin-top: 20px;
+      }
+    }
+    &__content{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top:42px;
+      width:100%;
+      & .panel{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width:273px;
+        & img{
+          width:200px;
+          margin-bottom: 33px;
+        }
+        & h6{
+          @include subtitle;
+          letter-spacing: 5px;
+          line-height: 150%;
+          font-weight: bold;
+          color:$fontcolor;
+          margin-bottom: 12px;
+          text-align: center;
+        }
+        & p{
+          @include text;
+          line-height: 150%;
+          text-align: center;
+        }
+        &--last{
+          & img{
+            margin-bottom: 20px;
+          }
+          & h6{
+            margin-bottom: 4px;
+          }
+        }
+      }
+      
+    }
+  }
+  &__backgroundtext--top{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+  }
+  &__backgroundtext--bottom{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+  }
+}
+
+
+.main__sec1{
+  background-color: #FFFFFF;
   // overflow: hidden;
-  background-color: aquamarine;
   & video{
     width: 100%;
     height: auto;
@@ -75,16 +203,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    &:before{
+      display: block;
+      width: 100%;
+      height: 100%;
+      content: " ";
+      position: absolute;
+      background: url(../img/top_movie_overlay@3x.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-attachment: fixed;
+      opacity: .9;  /* 透過度を適宜指定してください */
+      z-index: 1;
+    }
     & .content{
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      & .title{
-        @include title;
-        margin:0 15px;
-      }
+      z-index: 2;
       & .subtitle{
         @include subtitle;
         letter-spacing: 2px;
@@ -95,6 +234,37 @@
         @include button;
         position: absolute;
         bottom:-110px;
+        & span{
+          position:absolute;
+          left:50px;
+        }
+        &:before{
+          content:"";
+          position: absolute;
+          right:25px;
+          width:21px;
+          height:1px;
+          background-color: #FFFFFF;
+        }
+        &:after {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          z-index: 2;
+          display: block;
+          content: '';
+          width: 0;
+          height: 0;
+          background-color: rgba(255,255,255,.3);
+          border-radius: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          opacity: 0;
+        }
+        &:hover::after {
+          -webkit-animation: circle .75s;
+          animation: circle .75s;
+        }
       }
     }
   }
@@ -105,6 +275,7 @@
     right:36px;
     bottom:69px;
     font-weight: 400;
+    z-index:2;
     &:before{
       content:"";
       position:absolute;
@@ -113,7 +284,6 @@
       width:1px;
       height:55px;
       background-color: #FFFFFF;
-      z-index:1;
     }
     &:after{
       content:"";
@@ -123,7 +293,89 @@
       width:1px;
       height:55px;
       background-color: #B79ACA;
-      z-index:1;
+    }
+  }
+}
+
+// ボタンアニメーション
+@-webkit-keyframes circle {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+  }
+}
+@keyframes circle {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.main__sec2{
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & .container{
+    width:1164px;
+    height:1170px;
+    margin:0 auto;
+    &__top{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width:100%;
+      margin: 92px 0 190px;
+      & h1{
+        margin-top: 5px;
+        height:64px;
+        font-size:32px;
+        font-family: $serif;
+        color:$fontcolor;
+        line-height: 160%;
+        letter-spacing: 0.08em;
+        & span{
+          color: $pink;
+          font-weight: 600;
+          font-size: 40px;
+        }
+      }
+      & p{
+        margin-top: 27px;
+        @include subtitle;
+        font-family: $cjk;
+        color:$fontcolor;
+        font-weight: 500;
+        text-align: center;
+        line-height: 220%;
+        letter-spacing: 3px;
+      }
+    }
+    &__bottom{
+      width:100%;
+      margin-bottom:118px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    &__title{
+      position: relative;
+      &:before{
+        content:"";
+        position:absolute;
+        top:-150px;
+        width:1px;
+        height:100px;
+        background-color: #CBBCA9;
+      }
     }
   }
 }
