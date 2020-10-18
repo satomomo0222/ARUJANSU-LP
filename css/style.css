@@ -5,6 +5,11 @@
   font-weight: 500;
 }
 @font-face {
+  font-family: "ERIJI";
+  src: url("../えり字.otf");
+  font-weight: 500;
+}
+@font-face {
   font-family: "New York Small";
   src: url("../NewYorkSmall-Regular.otf");
   font-style: normal;
@@ -354,6 +359,371 @@
   width: 1px;
   height: 100px;
   background-color: #CBBCA9;
+}
+
+.main__sec3 {
+  width: 100%;
+  height: 5035px;
+  background: url(../img/bg_gradient_pc@3x.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+.main__sec3 .container {
+  width: 100%;
+  z-index: 1;
+}
+.main__sec3 .container__title {
+  padding-top: 80px;
+  margin-bottom: 86px;
+}
+.main__sec3 .container__content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.main__sec3 .container__content .card {
+  position: relative;
+  width: 1080px;
+  height: 802px;
+  z-index: 2;
+  margin-bottom: 140px;
+}
+.main__sec3 .container__content .card__tag {
+  position: absolute;
+  font-size: 16px;
+  font-family: "Noto Serif JP", serif;
+  line-height: 22px;
+  font-weight: 400;
+  color: #FFFFFF;
+  z-index: 4;
+  top: -67px;
+  padding: 86px 23px 34px;
+}
+.main__sec3 .container__content .card__tag span {
+  font-size: 24px;
+}
+.main__sec3 .container__content .card__tag:before {
+  position: absolute;
+  top: 38px;
+  right: 43px;
+  content: "";
+  width: 1px;
+  height: 30px;
+  background-color: #FFFFFF;
+}
+.main__sec3 .container__content .card__sign {
+  position: absolute;
+  z-index: 4;
+}
+.main__sec3 .container__content .card__image {
+  position: absolute;
+  top: 132px;
+  width: 527px;
+  z-index: 4;
+}
+.main__sec3 .container__content .card__container {
+  position: absolute;
+  top: 0;
+  width: 750px;
+  height: 100%;
+  z-index: 3;
+  background-color: #FFFFFF;
+}
+.main__sec3 .container__content .card__container--info {
+  display: flex;
+}
+.main__sec3 .container__content .card__container--info h1 {
+  font-family: "Noto Serif JP", serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  height: 26px;
+  width: 85px;
+  margin-right: 21px;
+  color: #484848;
+}
+.main__sec3 .container__content .card__container--info p {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 170%;
+  letter-spacing: 0.5px;
+  color: #333333;
+}
+.main__sec3 .container__content .card__container--info.info-color {
+  margin-bottom: 7px;
+}
+.main__sec3 .container__content .card__container--info.info-arrange {
+  margin-bottom: 40px;
+}
+.main__sec3 .container__content .card__container--point {
+  background-color: #FCFAFA;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+.main__sec3 .container__content .card__container--point h1 {
+  display: flex;
+  align-items: center;
+  height: 16px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 16px;
+  font-family: "Noto Serif JP", serif;
+  margin-bottom: 15px;
+  color: #484848;
+  letter-spacing: 0.02em;
+}
+.main__sec3 .container__content .card__container--point h1 span {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  color: #C6221F;
+  font-family: "New York Small";
+  padding: 1px 10px 1px 0;
+  letter-spacing: 3px;
+}
+.main__sec3 .container__content .card__container--point p {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 170%;
+  letter-spacing: 0.5px;
+  color: #333333;
+}
+
+.card--1 {
+  background-color: #FFF7EB;
+}
+.card--1 .card__tag {
+  background-color: #D6B398;
+  right: 30px;
+}
+.card--1 .card__sign {
+  left: -27px;
+  top: -8px;
+}
+.card--1 .card__image {
+  left: 10px;
+}
+.card--1 .card__container {
+  right: 0;
+  padding: 100px 70px 140px 232px;
+}
+.card--1 .card__container--title {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+  color: #744E2F;
+}
+.card--1 .card__container--subtitle {
+  font-family: "Noto Serif JP", serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 40px;
+  color: #744E2F;
+}
+.card--1 .card__container--message {
+  font-family: "ERIJI";
+  font-size: 36px;
+  line-height: 37px;
+  letter-spacing: -9px;
+  font-style: normal;
+  font-weight: bold;
+  margin-bottom: 12px;
+  white-space: nowrap;
+  color: #B9987E;
+}
+.card--2 {
+  background-color: #D2B7A7;
+}
+.card--2 .card__tag {
+  background-color: #907267;
+  left: 30px;
+}
+.card--2 .card__sign {
+  right: -30px;
+  top: 0;
+}
+.card--2 .card__image {
+  right: 10px;
+}
+.card--2 .card__container {
+  left: 0;
+  padding: 100px 232px 140px 70px;
+}
+.card--2 .card__container--title {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+  color: #5E3D29;
+}
+.card--2 .card__container--subtitle {
+  font-family: "Noto Serif JP", serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 40px;
+  color: #5D3D29;
+}
+.card--2 .card__container--message {
+  font-family: "ERIJI";
+  font-size: 36px;
+  line-height: 37px;
+  letter-spacing: -9px;
+  font-style: normal;
+  font-weight: bold;
+  margin-bottom: 12px;
+  white-space: nowrap;
+  color: #8F7A73;
+}
+.card--3 {
+  background-color: #F8F8F8;
+}
+.card--3 .card__tag {
+  background-color: #484848;
+  right: 30px;
+}
+.card--3 .card__sign {
+  left: -34px;
+  top: -10px;
+}
+.card--3 .card__image {
+  left: 10px;
+}
+.card--3 .card__container {
+  right: 0;
+  padding: 100px 70px 140px 232px;
+}
+.card--3 .card__container--title {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+  color: #403D3D;
+}
+.card--3 .card__container--subtitle {
+  font-family: "Noto Serif JP", serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 40px;
+  color: #403D3D;
+}
+.card--3 .card__container--message {
+  font-family: "ERIJI";
+  font-size: 36px;
+  line-height: 37px;
+  letter-spacing: -9px;
+  font-style: normal;
+  font-weight: bold;
+  margin-bottom: 12px;
+  white-space: nowrap;
+  color: #82838F;
+}
+.card--4 {
+  background-color: #CAC4EC;
+}
+.card--4 .card__tag {
+  background-color: #9392E0;
+  left: 30px;
+}
+.card--4 .card__sign {
+  right: -9px;
+  top: -2px;
+}
+.card--4 .card__image {
+  right: 10px;
+}
+.card--4 .card__container {
+  left: 0;
+  padding: 100px 232px 140px 70px;
+}
+.card--4 .card__container--title {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+  color: #5A4283;
+}
+.card--4 .card__container--subtitle {
+  font-family: "Noto Serif JP", serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 40px;
+  color: #5A4283;
+}
+.card--4 .card__container--message {
+  font-family: "ERIJI";
+  font-size: 36px;
+  line-height: 37px;
+  letter-spacing: -9px;
+  font-style: normal;
+  font-weight: bold;
+  margin-bottom: 12px;
+  white-space: nowrap;
+  color: #9B74CD;
+}
+.card--5 {
+  background-color: #FAC8CB;
+}
+.card--5 .card__tag {
+  background-color: #EB838B;
+  right: 30px;
+}
+.card--5 .card__sign {
+  left: -26px;
+  top: -5px;
+}
+.card--5 .card__image {
+  left: 10px;
+}
+.card--5 .card__container {
+  right: 0;
+  padding: 100px 70px 140px 232px;
+}
+.card--5 .card__container--title {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+  color: #A6596B;
+}
+.card--5 .card__container--subtitle {
+  font-family: "Noto Serif JP", serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 40px;
+  color: #A6596B;
+}
+.card--5 .card__container--message {
+  font-family: "ERIJI";
+  font-size: 36px;
+  line-height: 37px;
+  letter-spacing: -9px;
+  font-style: normal;
+  font-weight: bold;
+  margin-bottom: 12px;
+  white-space: nowrap;
+  color: #EB838B;
+  font-size: 34px;
 }
 
 /*# sourceMappingURL=style.css.map */
