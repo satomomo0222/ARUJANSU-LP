@@ -92,6 +92,8 @@
   white-space: nowrap;
 }
 
+
+// ヘッダー
 .header{
   width:100%;
   height:95px;
@@ -128,7 +130,7 @@
   position:absolute;
 }
 
-
+// 共通デザイン
 .section{
   position: relative;
   & .container{
@@ -218,7 +220,7 @@
   }
 }
 
-
+// セクション１
 .main__sec1{
   background-color: #FFFFFF;
   // overflow: hidden;
@@ -351,6 +353,7 @@
   }
 }
 
+// セクション２
 .main__sec2{
   background-color: #FFFFFF;
   display: flex;
@@ -414,6 +417,7 @@
   }
 }
 
+// セクション３
 .main__sec3{
   width: 100%;
   height:5035px;
@@ -576,6 +580,7 @@
       &--message{
         @include cardmessage;
         color: #B9987E;
+        -webkit-text-stroke: 0.5px #B9987E;
       }
     }
   }
@@ -606,6 +611,14 @@
       &--message{
         @include cardmessage;
         color: #8F7A73;
+        -webkit-text-stroke: 0.5px #8F7A73;
+        & span{
+          font-family: $sans;
+          font-weight: 100;
+          font-size: 27px;
+          letter-spacing: -5px;
+          -webkit-text-stroke: 0.3px #FFFFFF;
+        }
       }
     }
   }
@@ -636,6 +649,7 @@
       &--message{
         @include cardmessage;
         color:  #82838F;
+        -webkit-text-stroke: 0.5px #82838F;
       }
     }
   }
@@ -666,6 +680,7 @@
       &--message{
         @include cardmessage;
         color:  #9B74CD;
+        -webkit-text-stroke: 0.5px #9B74CD;
       }
     }
   }
@@ -697,6 +712,104 @@
         @include cardmessage;
         color: #EB838B;
         font-size: 34px;
+        -webkit-text-stroke: 0.5px #EB838B;
+      }
+    }
+  }
+}
+
+// セクション４
+.main__sec4{
+  position: relative;
+  width: 100%;
+  height:970px;
+  z-index: 0;
+  & .heart-circle{
+    position: absolute;
+    right:20px;
+    bottom:20px;
+    width:260px;
+    height:260px;
+    z-index:2;
+    & .heart{
+      position: absolute;
+      width:60px;
+      top:100px;
+      left:100px;
+    }
+    & .circle{
+      position: absolute;
+      width:260px;
+      top: 0;
+      left: 0;
+    }
+  }
+  & .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    &__title{
+      margin-top: 64px;
+    }
+    &__content{
+      position: relative;
+      width:1276px;
+      margin-top: 80px;
+      &--text{
+        position: absolute;
+        width:552px;
+        height:420px;
+        top:0;
+        left:0;
+        background-color: #FFFFFF;
+        padding: 60px 56px;
+        z-index:2;
+        & h1{
+          position: relative;
+          font-family: $serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 36px;
+          line-height: 26px;
+          letter-spacing: 1px;
+          color: #302E39;
+          & span{
+            padding-left:38px;
+          }
+          &:after{
+            position: absolute;
+            top:0;
+            left:129px;
+            content: "";
+            height:30px;
+            width:2px;
+            background-color: #302E39;
+          }
+        }
+        & p{
+          padding-top:46px;
+          padding-left:3px;
+          font-family: $sans;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 36.4px;
+          letter-spacing: 0.5px;
+        }
+        & img{
+          position: absolute;
+          bottom:44px;
+          right:47px;
+          width:178px;
+        }
+      }
+      &--image{
+        position: absolute;
+        top:0;
+        right:0;
+        width:940px;
+        z-index:1;
       }
     }
   }
