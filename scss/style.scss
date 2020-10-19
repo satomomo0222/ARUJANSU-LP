@@ -814,3 +814,205 @@
     }
   }
 }
+
+.main__sec5{
+  width:100%;
+  height: 941px;
+  background: #FDF4F2;
+  & .container{
+    width:100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    & img{
+      width:272px;
+      margin: 70px 0 63px;
+    }
+    & h1{
+      font-family: $serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 40px;
+      color:$fontcolor;
+      letter-spacing: 0.1em;
+      margin-bottom: 48px;
+      & .span1{
+        margin:0 8px;
+        color: #EA6A74;
+      }
+      & .span2{
+        position: relative;
+        font-style: normal;
+        font-size: 70px;
+        line-height: 60px;
+        color: #EA6A74;
+        &:after{
+          background: url(../img/icon_rown@3x.svg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          width:45px;
+          height:38px;
+          left:60px;
+          top:-20px;
+          content: "";
+          position: absolute;
+          display:inline-block;
+        }
+      }
+      & .span3{
+        font-size: 30px;
+        line-height: 60px;
+      }
+    }
+    &__content{
+      width:1300px;
+      height:225px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom:131px;
+      margin-top:0;
+      .panel2{
+        position: relative;
+        width:310px;
+        height:225px;
+        & img{
+          position: absolute;
+          top:0;
+          left:0;
+          width:100%;
+          margin:0;
+        }
+        & p{
+          display: block;
+          margin: 0 auto;
+          text-align: center;
+          font-family: $serif;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 160%;
+          color:$fontcolor;
+          letter-spacing: 0.04em;
+        }
+        & .text1{
+          width:210px;
+          margin-top: 46px;
+        }
+        & .text2{
+          width:221px;
+          margin-top:46px;
+        }
+        & .text3{
+          width:230px;
+          margin-top:53px;
+        }
+        & .text4{
+          width:230px;
+          margin-top:53px;
+        }
+      }
+    }
+    & small{
+      font-family: $serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 14px;
+      color: #A19BA1;
+      padding-bottom:100px;
+    }
+  }
+}
+
+.main__sec6{
+  background-color:  #FFFFFF;
+  width:100%;
+  height:3004px;
+  & .container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    &__title{
+      margin-top:36px;
+      margin-bottom:50px;
+    }
+    & .banner{
+      width:918px;
+      margin-bottom: 59px;
+    }
+    & small{
+      font-family: $cjk;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 220%;
+      margin-bottom:52px;
+      color: #ED717A;
+      letter-spacing: 2px;
+    }
+    &__content{
+      width:960px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 0;
+      margin-bottom:130px;
+      & .shop{
+        width:240px;
+        height:336px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & a{
+          & img{
+            width:180px;
+            margin:30px 30px 25px;
+          }
+          &.shopname{
+            letter-spacing: 0.4em;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 160%;
+            font-family: $serif;
+            color: #EA6A74;
+            height:32px;
+            text-align: center;
+
+            &::after{
+              content: '';
+              display: inline-block;
+              background: url(../img/ic_external-link@3x.svg);
+              background-size: contain;
+              background-repeat: no-repeat;
+              width: 16px;
+              height: 18px; 
+              margin-left:4px;
+            }
+          }
+        }
+        &.colorok{
+          position: relative;
+          &:after{
+            position: absolute;
+            content: 'カラーOK';
+            font-family: $cjk;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 21px;
+            text-align: center;
+            color: #FFFDFB;
+            background: #ED717A;
+            border-radius: 50px;
+            width:61px;
+            height:21px;
+            bottom:40px;
+            left:90px;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}

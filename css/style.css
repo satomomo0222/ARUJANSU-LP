@@ -834,4 +834,203 @@
   z-index: 1;
 }
 
+.main__sec5 {
+  width: 100%;
+  height: 941px;
+  background: #FDF4F2;
+}
+.main__sec5 .container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.main__sec5 .container img {
+  width: 272px;
+  margin: 70px 0 63px;
+}
+.main__sec5 .container h1 {
+  font-family: "Noto Serif JP", serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 40px;
+  color: #484848;
+  letter-spacing: 0.1em;
+  margin-bottom: 48px;
+}
+.main__sec5 .container h1 .span1 {
+  margin: 0 8px;
+  color: #EA6A74;
+}
+.main__sec5 .container h1 .span2 {
+  position: relative;
+  font-style: normal;
+  font-size: 70px;
+  line-height: 60px;
+  color: #EA6A74;
+}
+.main__sec5 .container h1 .span2:after {
+  background: url(../img/icon_rown@3x.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 45px;
+  height: 38px;
+  left: 60px;
+  top: -20px;
+  content: "";
+  position: absolute;
+  display: inline-block;
+}
+.main__sec5 .container h1 .span3 {
+  font-size: 30px;
+  line-height: 60px;
+}
+.main__sec5 .container__content {
+  width: 1300px;
+  height: 225px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 131px;
+  margin-top: 0;
+}
+.main__sec5 .container__content .panel2 {
+  position: relative;
+  width: 310px;
+  height: 225px;
+}
+.main__sec5 .container__content .panel2 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+}
+.main__sec5 .container__content .panel2 p {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 160%;
+  color: #484848;
+  letter-spacing: 0.04em;
+}
+.main__sec5 .container__content .panel2 .text1 {
+  width: 210px;
+  margin-top: 46px;
+}
+.main__sec5 .container__content .panel2 .text2 {
+  width: 221px;
+  margin-top: 46px;
+}
+.main__sec5 .container__content .panel2 .text3 {
+  width: 230px;
+  margin-top: 53px;
+}
+.main__sec5 .container__content .panel2 .text4 {
+  width: 230px;
+  margin-top: 53px;
+}
+.main__sec5 .container small {
+  font-family: "Noto Serif JP", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  color: #A19BA1;
+  padding-bottom: 100px;
+}
+
+.main__sec6 {
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 3004px;
+}
+.main__sec6 .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.main__sec6 .container__title {
+  margin-top: 36px;
+  margin-bottom: 50px;
+}
+.main__sec6 .container .banner {
+  width: 918px;
+  margin-bottom: 59px;
+}
+.main__sec6 .container small {
+  font-family: "Noto Sans CJK JP";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 220%;
+  margin-bottom: 52px;
+  color: #ED717A;
+  letter-spacing: 2px;
+}
+.main__sec6 .container__content {
+  width: 960px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-bottom: 130px;
+}
+.main__sec6 .container__content .shop {
+  width: 240px;
+  height: 336px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__sec6 .container__content .shop a img {
+  width: 180px;
+  margin: 30px 30px 25px;
+}
+.main__sec6 .container__content .shop a.shopname {
+  letter-spacing: 0.4em;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 160%;
+  font-family: "Noto Serif JP", serif;
+  color: #EA6A74;
+  height: 32px;
+  text-align: center;
+}
+.main__sec6 .container__content .shop a.shopname::after {
+  content: '';
+  display: inline-block;
+  background: url(../img/ic_external-link@3x.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 18px;
+  margin-left: 4px;
+}
+.main__sec6 .container__content .shop.colorok {
+  position: relative;
+}
+.main__sec6 .container__content .shop.colorok:after {
+  position: absolute;
+  content: 'カラーOK';
+  font-family: "Noto Sans CJK JP";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 21px;
+  text-align: center;
+  color: #FFFDFB;
+  background: #ED717A;
+  border-radius: 50px;
+  width: 61px;
+  height: 21px;
+  bottom: 40px;
+  left: 90px;
+  display: inline-block;
+}
+
 /*# sourceMappingURL=style.css.map */
