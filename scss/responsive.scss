@@ -1,1 +1,196 @@
 // sass ./scss/responsive.scss:./css/responsive.css --style expanded
+
+// レイアウト幅
+$layout-width-inner: 1300px;
+
+// ブレークポイント
+$breakpoints: (
+  "sp": "screen and (max-width: 560px)",
+  "tab": "screen and (max-width: 960px)",
+  "smpc": "screen and (max-width: #{$layout-width-inner - 1px})",
+  "pc": "screen and (min-width: #{$layout-width-inner})",
+);
+
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+.mobile{
+  display:none;
+}
+
+// 1300
+@include mq('smpc') {
+  .header{
+    &__left{
+      & img{
+      }
+    }
+    &__link{
+      margin-right:20px;
+    }
+  }
+
+  .main__sec1{
+    & video{
+    }
+    & .container{
+      & .content{
+        & .subtitle{
+        }
+        & .button{
+        }
+      }
+    }
+    & .scroll{
+    }
+  }
+}
+
+// 960
+@include mq('tab'){
+  .header{
+    &__left{
+      & img{
+      }
+    }
+    &__right{
+      display: none;
+    }
+    &__link{
+    }
+  }
+  .hamburger-btn{
+    display: block;
+    &.close{
+      display:none;
+    }
+  }
+  .menu{
+    
+  }
+  
+  .main__sec1{
+    height:100vh;
+    width:auto;
+    display: flex;
+    justify-content: center;
+    & video{
+      width:auto;
+      height:100%;
+    }
+    & .container{
+      &:before{
+        bottom:0;
+      }
+      & .content{
+        & .subtitle{
+        }
+        & .button{
+        }
+      }
+    }
+    & .scroll{
+    }
+  }
+}
+
+// 560
+@include mq('sp') {
+  .mobile{
+    display:block;
+  }
+  .desktop{
+    display:none;
+  }
+
+  .header{
+    height:65px;
+    &__left{
+      padding-left:15px;
+      & img{
+        width:159px;
+      }
+    }
+  }
+  .hamburger-btn{
+    width:65px;
+  }
+  .menu{
+    padding:128px 40px;
+  }
+  
+  .main__sec1{
+    height:521px;
+    & .container{
+      & .content{
+        & .title{
+          width:320px;
+        }
+        & .subtitle{
+          font-weight: 400;
+          letter-spacing: 0;
+          font-size: 12px;
+          height:26px;
+          margin-top:0;
+        }
+        & .button{
+          bottom:-90px;
+        }
+      }
+    }
+    & .scroll{
+      right:10px;
+      bottom:50px;
+      font-size: 12px;
+      line-height: 16px;
+      &:before{
+        bottom:-50px;
+        height:40px;
+      }
+      &:after{
+        bottom:-90px;
+        height:40px;
+      }
+    }
+  }
+
+  .main__sec2{
+    & .container{
+      &__top{
+        margin-top:49px;
+        margin-bottom: 162px;
+        & img{
+          width:303px;
+        }
+        & h1{
+          margin-top:20px;
+          height:70px;
+          font-size:14px;
+          line-height: 35px;
+          letter-spacing: 0.17em;
+          & span{
+            font-size: 22px;
+          }
+        }
+        & p{
+          margin-top: 20px;
+          height:64px;
+          font-size:12px;
+          line-height:26px;
+        }
+      }
+      &__bottom{
+        margin-bottom:113px;
+      }
+      &__title{
+        &:before{
+          top:-120px;
+          height:80px;
+        }
+      }
+    }
+  }
+}

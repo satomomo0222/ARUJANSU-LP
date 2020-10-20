@@ -92,6 +92,15 @@
   white-space: nowrap;
 }
 
+.fadein-down{
+  transition: 1s;
+  transform: translateY(-60px);
+  opacity:0;
+  &.fadein{
+    transform: translateY(0);
+    opacity:1;
+  }
+}
 
 // ヘッダー
 .header{
@@ -107,17 +116,20 @@
       width:215px;
     }
   }
-  &__logo{
-    width:30px;
+  &__right{
+    display: flex;
+    flex-wrap: nowrap;
   }
   &__link{
     @include subtitle;
     margin-right:40px;
+    width:auto;
+    white-space: nowrap;
   }
 }
 
 .header--fadein{
-  display:none;
+  z-index:20;
   position:fixed;
   background-color: #FFFFFF;
   box-shadow: 0px 1px 13px rgba(152, 104, 108, 0.15);
@@ -130,7 +142,47 @@
   position:absolute;
 }
 
+.hamburger-btn{
+  width:95px;
+  z-index:100;
+  position: fixed;
+  top:0;
+  right:0;
+  display:none;
+}
+
+.menu{
+  display:none;
+  cursor: pointer;
+  overflow: hidden;
+  position:fixed;
+  width:100%;
+  height:100%;
+  background-color: #FFFFFF;
+  z-index:50;
+  & ul li{
+    margin-bottom: 48px;
+    & a{
+      font-family: $serif;
+      color: #484848;
+      letter-spacing: -0.01em;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+  & img{
+    position: absolute;
+    right:0;
+    bottom:-11px;
+  }
+}
+
 // 共通デザイン
+html,body,.main{
+  overflow-x: hidden;
+}
 .section{
   position: relative;
   & .container{
@@ -203,8 +255,7 @@
             margin-bottom: 4px;
           }
         }
-      }
-      
+      }   
     }
   }
   &__backgroundtext--top{
@@ -224,10 +275,9 @@
 // セクション１
 .main__sec1{
   background-color: #FFFFFF;
-  // overflow: hidden;
+  width:100%;
   & video{
-    width: 100%;
-    height: auto;
+    width:100%;
   }
   & .container{
     width: 100%;
@@ -244,7 +294,7 @@
       display: block;
       width: 100%;
       height: 100%;
-      content: " ";
+      content: "";
       position: absolute;
       background: url(../img/top_movie_overlay@3x.svg);
       background-size: cover;
@@ -253,6 +303,7 @@
       background-attachment: fixed;
       opacity: .9;  /* 透過度を適宜指定してください */
       z-index: 1;
+      bottom:1px;
     }
     & .content{
       position: relative;
@@ -372,6 +423,7 @@
       width:100%;
       margin: 92px 0 190px;
       & h1{
+        text-align: center;
         margin-top: 5px;
         height:64px;
         font-size:32px;
@@ -412,7 +464,7 @@
         top:-150px;
         width:1px;
         height:100px;
-        background-color: #141414;
+        background-color: #CBBCA9;
       }
     }
   }
@@ -940,6 +992,9 @@
     & .banner{
       width:918px;
       margin-bottom: 59px;
+      & img{
+        width:100%;
+      }
     }
     & small{
       font-family: $cjk;
