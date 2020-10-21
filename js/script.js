@@ -17,3 +17,28 @@ $(window).scroll(function(){
     }
   });
 });
+
+
+// $(window).resize(function() {
+//   windowWidth = $(window).width();
+//   if (windowWidth <= 560){
+//     $('.slick').slick();
+//   }
+// });
+
+// window.onload = function() {
+//   windowWidth = $(window).width();
+//   if (windowWidth <= 560){
+//     $('.slick').slick();
+//   }
+// };
+$(function(){
+  $('.slick').slick({
+    dots: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 1,
+    arrows:false,
+    dotsClass: 'slide-dots'
+  });
+});

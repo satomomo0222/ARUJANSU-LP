@@ -200,6 +200,47 @@ html, body, .main {
   width: 100%;
 }
 
+.slide-dots {
+  position: relative;
+  text-align: center;
+  margin-top: 34px;
+}
+.slide-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+.slide-dots li button {
+  background-color: white;
+  border: none;
+  position: relative;
+  text-indent: -9999px;
+  width: 10px;
+}
+.slide-dots li button:before {
+  content: '';
+  width: 10px;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #CEC1C2;
+}
+.slide-dots li.slick-active {
+  width: 30px;
+}
+.slide-dots li.slick-active button {
+  width: 30px;
+}
+.slide-dots li.slick-active button:before {
+  content: '';
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #EA6A74;
+}
+
 .main__sec1 {
   background-color: #FFFFFF;
   width: 100%;
@@ -360,7 +401,9 @@ html, body, .main {
 .main__sec2 .container {
   width: 1164px;
   height: 1170px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .main__sec2 .container__top {
   display: flex;
