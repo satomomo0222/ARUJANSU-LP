@@ -263,15 +263,9 @@ $breakpoints: (
             }
           }
           &__sign{
-            // width:320px;
-            // top:164.31px;
-            // left:-6.94px;
-            // z-index:5;
             display:none;
           }
           &__image{
-            // top:212.86px;
-            // width:355px;
             display:none;
           }
           &__image--sp{
@@ -439,8 +433,66 @@ $breakpoints: (
     }
   }
 
-
-
-
+  .main__sec4{
+    height:900px;
+    & .heart-circle{
+      position:absolute;
+      right:-60px;
+      bottom:-55px;
+      width:200px;
+      height:200px;
+      & .heart{
+        position: absolute;
+        width:47px;
+        top:79px;
+        left:76px;
+      }
+      & .circle{
+        width:200px;
+      }
+    }
+    & .container{
+      &__title{
+        margin-top:56px;
+      }
+      &__content{
+        margin-top:35px;
+        width:375px;
+        height:700px;
+        &--text{
+          width:375px;
+          height:420px;
+          padding:30px 20px 134px;
+          & h1{
+            font-size:26px;
+            margin-left:60px;
+            &:after{
+              top:3px;
+              left:99px;
+              height:20px;
+            }
+          }
+          & p{
+            padding-top:50px;
+            padding-left:0;
+          }
+          & img{
+            bottom:37.72px;
+            right:23.76px;
+            width:166.77px;
+          }
+        }
+        &--image{
+          top:unset;
+          right:50%;
+          transform: translate(50%, 0);
+          bottom:0;
+          width:auto;
+          height:280px;
+          margin:auto;
+        }
+      }
+    }
+  }
 }
 
