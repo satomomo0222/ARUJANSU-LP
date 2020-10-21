@@ -494,5 +494,63 @@ $breakpoints: (
       }
     }
   }
+
+  .main__sec5{
+    height:856px;
+    width:100%;
+    & .container{
+      & img{
+        margin:80px 0 51px;
+      }
+      & h1{
+        font-size:17px;
+        margin-bottom:123px;
+        & .span1{
+          margin-left: 0;
+          margin-right: 4px;
+        }
+        & .span2{
+          font-size:40px;
+          &:after{
+            width:36px;
+            height:30px;
+            left:30px;
+            top:-10px;
+          }
+        }
+        & .span3{
+          display:none;
+        }
+      }
+      &__content{
+        display:unset;
+        width:100vw;
+        height:auto;
+        .panel2{
+          width:310px;
+          height:225px;
+          & img{
+            width:310px;
+            left:50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+      & small{
+        position:absolute;
+        width:343px;
+        bottom:450px;
+        font-size:12px;
+        line-height: 20px;
+        padding-left:10px;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  
+
+
+
 }
 

@@ -42,3 +42,13 @@ $(function(){
     dotsClass: 'slide-dots'
   });
 });
+$(function(){
+  $('.slick1').slick({
+    dots: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 1,
+    arrows:false,
+    dotsClass: 'slide-dots'
+  });
+});
