@@ -356,8 +356,17 @@
             <h1>サロンリスト</h1>
             <img src="img/deco_title_bottom_medium@3x.svg" class="container__title--bottom">
           </div>
-          <a href="#" class="banner"><img src="img/banner_shop_large@3x.svg" alt=""></a>
-          <small>カラーOKの店舗ではカラーとエクステが同時施術できます。</small>
+          <a href="#" class="banner desktop"><img src="img/banner_shop_large@3x.svg" alt=""></a>
+          <a href="#" class="banner mobile"><img src="img/banner_shop_small@3x.svg" alt=""></a>
+
+          <div class="selectbox mobile">
+            <select name="pulldown2">
+              <option value="">店舗名を選択する</option>
+              <option value="/category/php">札幌店</option>
+              <option value="/category/jquery">仙台店</option>
+            </select><input type="button" id="location" value="GO"></div>
+
+          <small>カラーOKの店舗ではカラーとエクステが<br class="mobile">同時施術できます。</small>
           <div class="container__content">
             <div class="shop colorok">
               <a href="#"><img src="img/img_shop_01@2x.png" alt=""></a>

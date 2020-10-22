@@ -44,13 +44,13 @@
 
   .section .container__title__top {
     width: 51px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
   .section .container__title p {
     font-weight: 400;
     font-size: 10px;
     line-height: 12px;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
   }
   .section .container__title h1 {
     font-size: 18px;
@@ -247,7 +247,7 @@
     margin: 0 8px 16px;
   }
   .main__sec3 .container__content .card.card--1 {
-    height: 1331px;
+    height: 1341px;
   }
   .main__sec3 .container__content .card.card--1 .card__container {
     top: 577px;
@@ -284,7 +284,7 @@
     font-weight: 40;
   }
   .main__sec3 .container__content .card.card--3 {
-    height: 1297px;
+    height: 1307px;
   }
   .main__sec3 .container__content .card.card--3 .card__container {
     height: auto;
@@ -342,6 +342,7 @@
 
   .main__sec4 {
     height: 900px;
+    z-index: 6;
   }
   .main__sec4 .heart-circle {
     position: absolute;
@@ -349,15 +350,21 @@
     bottom: -55px;
     width: 200px;
     height: 200px;
+    z-index: 6;
   }
   .main__sec4 .heart-circle .heart {
     position: absolute;
     width: 47px;
     top: 79px;
     left: 76px;
+    z-index: 6;
   }
   .main__sec4 .heart-circle .circle {
     width: 200px;
+    z-index: 6;
+  }
+  .main__sec4 .container {
+    height: 100%;
   }
   .main__sec4 .container__title {
     margin-top: 56px;
@@ -398,11 +405,13 @@
     width: auto;
     height: 280px;
     margin: auto;
+    z-index: 4;
   }
 
   .main__sec5 {
     height: 856px;
     width: 100%;
+    z-index: 5;
   }
   .main__sec5 .container img {
     margin: 80px 0 51px;
@@ -447,7 +456,58 @@
     bottom: 450px;
     font-size: 12px;
     line-height: 20px;
+    padding-left: 10px;
     padding-bottom: 0;
+  }
+
+  .main__sec6 {
+    height: 2986px;
+  }
+  .main__sec6 .container {
+    width: 375px;
+    margin: 0 auto;
+  }
+  .main__sec6 .container__title {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  .main__sec6 .container .banner {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .main__sec6 .container small {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 3px;
+    text-align: center;
+    height: 50px;
+    margin-bottom: 35px;
+  }
+  .main__sec6 .container__content {
+    width: 328px;
+    margin-bottom: 101px;
+  }
+  .main__sec6 .container__content .shop {
+    width: 164px;
+    height: 187px;
+  }
+  .main__sec6 .container__content .shop a:first-child {
+    margin: 0 32px 8px;
+  }
+  .main__sec6 .container__content .shop a img {
+    width: 100px;
+  }
+  .main__sec6 .container__content .shop a.shopname {
+    font-size: 14px;
+    height: 22px;
+  }
+  .main__sec6 .container__content .shop a.shopname::after {
+    margin-left: 4px;
+    transform: translateY(2px);
+  }
+  .main__sec6 .container__content .shop.colorok:after {
+    bottom: 30px;
+    left: 50px;
   }
 }
 
