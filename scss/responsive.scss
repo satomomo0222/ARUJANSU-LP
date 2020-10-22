@@ -609,5 +609,88 @@ $breakpoints: (
       }
     }
   }
+
+  .main__sec7{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height:1012px;
+    padding:50px 0 30px;
+    & .container{
+      width:100%;
+      height:100%;
+      position: relative;
+      & .appimg{
+        position: absolute;
+        width:335px;
+        top:92px;
+        left:20px;
+      }
+      &__content{
+        width:100%;
+        padding:0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & h1{
+          font-size:26px;
+          line-height: 36.4px;
+          align-items: center;
+          margin-bottom:360px;
+        }
+        & img{
+          width:343px;
+        }
+        & ul{
+          margin:4px 0 10px;
+          width:343px;
+          & li{
+            width:100%;
+            font-size:14px;
+            line-height: 290%;
+            white-space: unset;
+            letter-spacing: 0;
+            margin-left:0;
+            &:last-child{
+              line-height: 200%;
+              margin-top:7px;
+            }
+          }
+        }
+        & .link{
+          margin-top: 33px;
+          flex-direction: column;
+          align-items:center;
+          width:100%;
+          & .apple{
+            width:278px;
+            margin-right:0;
+            margin-bottom:20px;
+            & img{
+              border-radius:15px;
+            }
+          }
+          & .google{
+            width:278px;
+            & img{
+              border-radius:10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  footer{
+    width:100vw;
+    & small{
+      font-size:10px;
+      text-align:center;
+    }
+  }
+
+
+
 }
 

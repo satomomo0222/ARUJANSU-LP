@@ -1196,7 +1196,7 @@ html, body, .main {
   height: 500px;
   position: relative;
 }
-.main__sec7 .container img {
+.main__sec7 .container .appimg {
   position: absolute;
   top: 0;
   left: 0;

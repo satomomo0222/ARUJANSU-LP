@@ -466,6 +466,7 @@
   .main__sec6 .container {
     width: 375px;
     margin: 0 auto;
+    height: 100%;
   }
   .main__sec6 .container__title {
     margin-top: 50px;
@@ -508,6 +509,85 @@
   .main__sec6 .container__content .shop.colorok:after {
     bottom: 30px;
     left: 50px;
+  }
+
+  .main__sec7 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1012px;
+    padding: 50px 0 30px;
+  }
+  .main__sec7 .container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .main__sec7 .container .appimg {
+    position: absolute;
+    width: 335px;
+    top: 92px;
+    left: 20px;
+  }
+  .main__sec7 .container__content {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main__sec7 .container__content h1 {
+    font-size: 26px;
+    line-height: 36.4px;
+    align-items: center;
+    margin-bottom: 360px;
+  }
+  .main__sec7 .container__content img {
+    width: 343px;
+  }
+  .main__sec7 .container__content ul {
+    margin: 4px 0 10px;
+    width: 343px;
+  }
+  .main__sec7 .container__content ul li {
+    width: 100%;
+    font-size: 14px;
+    line-height: 290%;
+    white-space: unset;
+    letter-spacing: 0;
+    margin-left: 0;
+  }
+  .main__sec7 .container__content ul li:last-child {
+    line-height: 200%;
+    margin-top: 7px;
+  }
+  .main__sec7 .container__content .link {
+    margin-top: 33px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .main__sec7 .container__content .link .apple {
+    width: 278px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .main__sec7 .container__content .link .apple img {
+    border-radius: 15px;
+  }
+  .main__sec7 .container__content .link .google {
+    width: 278px;
+  }
+  .main__sec7 .container__content .link .google img {
+    border-radius: 10px;
+  }
+
+  footer {
+    width: 100vw;
+  }
+  footer small {
+    font-size: 10px;
+    text-align: center;
   }
 }
 
