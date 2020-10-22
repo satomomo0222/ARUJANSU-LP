@@ -6,7 +6,7 @@ $('.hamburger-btn').on('click',function(){
 
 
 
-// ヘッダー
+// ヘッダーが上からフェードイン
 $(window).scroll(function(){
   $('.fadein-down').each(function(){
     var scroll = $(window).scrollTop();
@@ -18,37 +18,28 @@ $(window).scroll(function(){
   });
 });
 
-
-// $(window).resize(function() {
-//   windowWidth = $(window).width();
-//   if (windowWidth <= 560){
-//     $('.slick').slick();
-//   }
-// });
-
-// window.onload = function() {
-//   windowWidth = $(window).width();
-//   if (windowWidth <= 560){
-//     $('.slick').slick();
-//   }
-// };
-$(function(){
-  $('.slick').slick({
-    dots: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 1,
-    arrows:false,
-    dotsClass: 'slide-dots'
-  });
-});
-$(function(){
-  $('.slick1').slick({
-    dots: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 1,
-    arrows:false,
-    dotsClass: 'slide-dots'
-  });
+// 画面幅を変えた時、もしくはリロードした際に画面幅を測定してレスポンシブ可動化を判定。レスポンシブだった場合起動。
+$(window).resize(function() {
+  windowWidth = $(window).width();
+  if (windowWidth <= 560){
+    $('.slick').slick({
+      dots: true,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 1,
+      arrows:false,
+      dotsClass: 'slide-dots'
+    });
+    $('.slick1').slick({
+      dots: true,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 1,
+      arrows:false,
+      dotsClass: 'slide-dots'
+    });
+  } else{
+    $('.slick').slick('unslick');
+    $('.slick1').slick('unslick');
+  }
 });
