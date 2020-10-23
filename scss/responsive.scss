@@ -111,7 +111,22 @@ $breakpoints: (
       }
     }
   }
-
+  .main__sec7{
+    & .container{
+      width:940px;
+      & .appimg{
+        width:470px;
+      }
+      &__content{
+        padding:16px 0 16px 521px;
+        & ul{
+          & li{
+            white-space: unset;
+          }
+        }
+      }
+    }
+  }
 
 }
 
@@ -130,8 +145,6 @@ $breakpoints: (
     &.close{
       display:none;
     }
-  }
-  .menu{
   }
   
   .main__sec1{
@@ -486,7 +499,7 @@ $breakpoints: (
         }
       }
       &__content{
-        max-width:750px;
+        max-width:670px;
         width:100%;
         height:auto;
         margin-bottom:50px;
@@ -508,8 +521,117 @@ $breakpoints: (
     }
   }
 
-
-
+  .main__sec6{
+    width:100%;
+    height:auto;
+    & .container{
+      & .banner{
+        width:560px;
+      }
+      &__content{
+        width:560px;
+        & .shop{
+          width:164px;
+          height:187px;
+          & a{
+            &:first-child{
+              margin:0 32px 8px;
+            }
+            & img{
+              width:100px;
+            }
+            &.shopname{
+              font-size: 14px;
+              height:22px;
+              &::after{
+                margin-left: 4px;
+                transform: translateY(2px);
+              }
+            }
+          }
+          &.colorok{
+            &:after{
+              bottom:30px;
+              left:50px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .main__sec7{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height:auto;
+    padding:100px 0 30px;
+    & .container{
+      width:100%;
+      height:100%;
+      position: relative;
+      & .appimg{
+        position: absolute;
+        width:500px;
+        top:92px;
+        left:50%;
+        transform:translateX(-50%);
+      }
+      &__content{
+        width:100%;
+        padding:0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & h1{
+          line-height: 36.4px;
+          align-items: center;
+          margin-bottom:560px;
+        }
+        & img{
+          width:540px;
+        }
+        & ul{
+          margin:4px 0 10px;
+          width:540px;
+          & li{
+            width:100%;
+            font-size:14px;
+            line-height: 290%;
+            white-space: unset;
+            letter-spacing: 0;
+            margin-left:0;
+            &:last-child{
+              line-height: 200%;
+              margin-top:7px;
+            }
+          }
+        }
+        & .link{
+          margin-top: 33px;
+          & .apple{
+            width:208px;
+            margin-right: 52px;
+            & img{
+              border-radius:15px;
+            }
+          }
+          & .google{
+            width:225px;
+            & img{
+              border-radius:10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  footer{
+    width:100vw;
+    & small{
+      font-size:12px;
+      text-align:center;
+    }
+  }
 
 
 }
@@ -564,6 +686,15 @@ $breakpoints: (
   }
   .menu{
     padding:128px 40px;
+    & ul li{
+      & a{
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+    & img{
+      width:auto;
+    }
   }
   
   .main__sec1{
@@ -601,13 +732,30 @@ $breakpoints: (
     }
   }
 
+  #lineanimation{
+    &.container__title{
+      &:before{
+        transition: 2s;
+            height:0;
+      }
+    }
+    &.long{
+      &.container__title{
+        &:before{
+          height:80px;
+        }
+      }
+    }
+  }
+
+
   .main__sec2{
     & .container{
       width:auto;
       height:auto;
       &__top{
         margin-top:49px;
-        margin-bottom: 162px;
+        margin-bottom: 112px;
         & img{
           width:303px;
         }
@@ -634,7 +782,6 @@ $breakpoints: (
       &__title{
         &:before{
           top:-120px;
-          height:80px;
         }
       }
       &__content{
@@ -1064,7 +1211,6 @@ $breakpoints: (
         position: absolute;
         width:335px;
         top:92px;
-        left:20px;
       }
       &__content{
         width:100%;
@@ -1134,6 +1280,10 @@ $breakpoints: (
     & .container{
       &__content{
         & .card{
+          &__image--sp{
+            width:340px;
+            left:20px;
+          }
           &.card--3{
             & .card__container{
               &--title{
@@ -1153,15 +1303,18 @@ $breakpoints: (
     }
   }
   .main__sec4{
+    height:950px;
     & .container{
+      height:100%;
       &__content{
+        height:100%;
         &--text{
-          & p{
-            padding-right:20px;
-            padding-left:20px;
+          width:100vw;
+          & h1{
+            margin-left:35px;
           }
           & img{
-            bottom:30px;
+            bottom:0;
           }
         }
       }

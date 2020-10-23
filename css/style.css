@@ -25,6 +25,42 @@
   opacity: 1;
 }
 
+.fadein-up {
+  transition: .5s;
+  transition-timing-function: ease-out;
+  opacity: 0;
+  transform: translateY(100px);
+}
+.fadein-up.fadein {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#lineanimation.container__title:before {
+  transition: 2s;
+  height: 0;
+}
+#lineanimation.long.container__title:before {
+  height: 100px;
+}
+
+.slick .panel {
+  opacity: 0;
+  transition: 1s;
+}
+.slick .panel.panel02 {
+  transition-delay: .2s;
+}
+.slick .panel.panel03 {
+  transition-delay: .4s;
+}
+.slick .panel.panel04 {
+  transition-delay: .6s;
+}
+.slick.fadein .panel {
+  opacity: 1;
+}
+
 .header {
   width: 100%;
   height: 95px;
@@ -68,6 +104,7 @@
 }
 
 .hamburger-btn {
+  cursor: pointer;
   width: 95px;
   z-index: 100;
   position: fixed;
@@ -77,14 +114,15 @@
 }
 
 .menu {
-  display: none;
-  cursor: pointer;
   overflow: hidden;
   position: fixed;
   width: 100%;
   height: 100%;
   background-color: #FFFFFF;
   z-index: 50;
+  padding: 200px 100px;
+  transform: translateX(-150vw);
+  transition: .5s;
 }
 .menu ul li {
   margin-bottom: 48px;
@@ -95,13 +133,18 @@
   letter-spacing: -0.01em;
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 26px;
+  font-size: 22px;
+  line-height: 40px;
 }
 .menu img {
   position: absolute;
   right: 0;
   bottom: -11px;
+  width: 100px;
+}
+
+.menu.active {
+  transform: translateX(0);
 }
 
 html, body, .main {
@@ -411,7 +454,7 @@ html, body, .main {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  margin: 92px 0 190px;
+  margin: 92px 0 100px;
 }
 .main__sec2 .container__top h1 {
   text-align: center;
@@ -443,6 +486,7 @@ html, body, .main {
 }
 .main__sec2 .container__bottom {
   width: 100%;
+  padding-top: 90px;
   margin-bottom: 118px;
   display: flex;
   justify-content: center;
@@ -457,7 +501,6 @@ html, body, .main {
   position: absolute;
   top: -150px;
   width: 1px;
-  height: 100px;
   background-color: #CBBCA9;
 }
 
