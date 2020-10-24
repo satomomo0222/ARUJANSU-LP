@@ -913,13 +913,14 @@ html,body,.main{
       margin-top: 80px;
       &--text{
         position: absolute;
-        width:552px;
+        width:0;
         height:420px;
         top:0;
         left:0;
         background-color: #FFFFFF;
         padding: 60px 56px;
         z-index:2;
+        transition:1s;
         & h1{
           position: relative;
           font-family: $serif;
@@ -929,6 +930,9 @@ html,body,.main{
           line-height: 26px;
           letter-spacing: 1px;
           color: #302E39;
+          opacity: 0;
+          transition: 1s;
+          transition-delay: 1.2s;
           & span{
             padding-left:38px;
           }
@@ -952,12 +956,30 @@ html,body,.main{
           line-height: 36.4px;
           letter-spacing: 0.5px;
           color:$fontcolor;
+          opacity: 0;
+          transition: 1s;
+          transition-delay: 1.6s;
         }
         & img{
           position: absolute;
           bottom:44px;
           right:47px;
           width:178px;
+          opacity: 0;
+          transition: 1s;
+          transition-delay: 2s;
+        }
+        &.fadein{
+          width:552px;
+          & h1{
+            opacity:1;
+          }
+          & p{
+            opacity:1;
+          }
+          & img{
+            opacity: 1;
+          }
         }
       }
       &--image{

@@ -441,12 +441,13 @@ $breakpoints: (
         margin: 20px auto 0;
         height:100%;
         &--text{
-          width:100%;
           height:420px;
           padding:30px 50px 134px;
+          transition: 0s;
           & h1{
             font-size:26px;
             margin-left:125px;
+            transition-delay: .2s;
             &:after{
               top:3px;
               left:99px;
@@ -456,11 +457,16 @@ $breakpoints: (
           & p{
             padding-top:50px;
             padding-left:0;
+            transition-delay: .6s;
           }
           & img{
             bottom:100.72px;
             right:23.76px;
             width:166.77px;
+            transition-delay: 1s;
+          }
+          &.fadein{
+            width:100%;
           }
         }
         &--image{
@@ -1085,6 +1091,9 @@ $breakpoints: (
           margin:auto;
           z-index:4;
         }
+        &.fadein{
+          width:375px;
+        }
       }
     }
   }
@@ -1307,6 +1316,7 @@ $breakpoints: (
     & .container{
       height:100%;
       &__content{
+        width:100%;
         height:100%;
         &--text{
           width:100vw;
