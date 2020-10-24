@@ -371,6 +371,23 @@ html,body,.main{
   }
 }
 
+.topbanner-pc{
+  & img{
+    width:100%;
+  }
+  bottom:-21px;
+  right:5%;
+  position: fixed;
+  z-index:10;
+}
+.topbanner-sp{
+  & img{
+    width:100%;
+  }
+  display: none;
+  position: fixed;
+  z-index: 10;
+}
 
 // セクション１
 .main__sec1{

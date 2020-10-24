@@ -285,6 +285,29 @@ html, body, .main {
   background-color: #EA6A74;
 }
 
+.topbanner-pc {
+  bottom: -21px;
+  right: 5%;
+  position: fixed;
+  z-index: 10;
+}
+.topbanner-pc img {
+  width: 100%;
+}
+
+.topbanner-sp {
+  display: none;
+  position: fixed;
+  bottom: -4%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110%;
+  z-index: 10;
+}
+.topbanner-sp img {
+  width: 100%;
+}
+
 .main__sec1 {
   background-color: #FFFFFF;
   width: 100%;

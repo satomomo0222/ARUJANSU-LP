@@ -100,6 +100,16 @@
     display: none;
   }
 
+  .topbanner-pc {
+    display: none;
+  }
+
+  .topbanner-sp {
+    display: block;
+    bottom: -4%;
+    width: 100%;
+  }
+
   .main__sec1 {
     height: 100vh;
   }
@@ -614,6 +624,13 @@
   }
   .menu img {
     width: auto;
+  }
+
+  .topbanner-sp {
+    bottom: -4%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110%;
   }
 
   .main__sec1 {
