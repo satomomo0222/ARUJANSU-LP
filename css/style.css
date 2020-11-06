@@ -286,7 +286,7 @@ html, body, .main {
 }
 
 .topbanner-pc {
-  bottom: -21px;
+  bottom: -23px;
   right: 5%;
   position: fixed;
   z-index: 10;
@@ -298,10 +298,6 @@ html, body, .main {
 .topbanner-sp {
   display: none;
   position: fixed;
-  bottom: -4%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 110%;
   z-index: 10;
 }
 .topbanner-sp img {

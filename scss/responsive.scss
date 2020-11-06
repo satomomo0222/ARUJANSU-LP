@@ -152,8 +152,11 @@ $breakpoints: (
   }
   .topbanner-sp{
     display: block;
-    bottom: -4%;
+    bottom: -5%;
     width: 100%;
+    &-b{
+      bottom:0;
+    }
   }
   
   
@@ -714,10 +717,13 @@ $breakpoints: (
   }
 
   .topbanner-sp{
-    bottom: -4%;
+    bottom: -5%;
     left: 50%;
     transform: translateX(-50%);
     width: 110%;
+    &-b{
+      bottom:0;
+    }
   }
   
   .main__sec1{

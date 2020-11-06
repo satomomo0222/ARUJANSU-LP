@@ -29,3 +29,12 @@ iframe { vertical-align: bottom }
 img { vertical-align: middle }
 strong, small, span { font-weight: inherit }
 h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, table, th, td, figcaption { max-height: 100% }
+
+input,textarea {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-appearance: none;
+  max-width: 100%;
+  border-radius: 0;
+}

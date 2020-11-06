@@ -106,8 +106,11 @@
 
   .topbanner-sp {
     display: block;
-    bottom: -4%;
+    bottom: -5%;
     width: 100%;
+  }
+  .topbanner-sp-b {
+    bottom: 0;
   }
 
   .main__sec1 {
@@ -627,10 +630,13 @@
   }
 
   .topbanner-sp {
-    bottom: -4%;
+    bottom: -5%;
     left: 50%;
     transform: translateX(-50%);
     width: 110%;
+  }
+  .topbanner-sp-b {
+    bottom: 0;
   }
 
   .main__sec1 {
